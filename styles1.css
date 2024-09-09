@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Montserrat&family=Sacramento&display=swap");
+
+:root {
+    --nav-color: #675d50;
+    --nav-text: #fff;
+    --primary-color: #f3deba;
+    --secondary-color: #abc4aa;
+    --hover-color: #a9907e;
+}
+
+body {
+    height: 100%;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+
+/* .container {
+    background-color: var(--nav-color);
+    font-size: 1.2rem;
+    font-family: "Merriweather Sans", sans-serif;
+    height: 70px;
+} */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ede7da;
+    overflow: hidden;
+    /* width: 80%; */
+    /* margin: auto; */
+}
+
+.navbar a {
+    float: left;
+    color: #0f0f0f;
+    text-decoration: none;
+    justify-content: space-between;
+    font-size: 1.5vw;
+    padding: 14px 16px;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+    background-color: #726730;
+    color: rgb(255, 255, 255);
+}
+
+@media (width < 600px) {
+    .navbar a:not(:first-child) {display: none;}
+    .navbar a.icon {
+      float: right;
+      display: block;
+    }
+}
+
+.logo {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 75px;
+    height: 75px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 25%;
+    display: flex;
+    /* margin-left: 50%; */
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.name-position {
+    /* padding: 2px 16px; */
+    justify-content: center;
+  }

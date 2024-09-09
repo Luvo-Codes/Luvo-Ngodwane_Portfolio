@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luvo Ngodwane's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="renderPages.js"></script>
+</head>
+<body>
+    <div class="navbar" id="myTopnav">
+        <div class="logo" >
+            <img 
+            alt="logo-picture" 
+            src="resources/unnamed.png" 
+            width="75" 
+            height="75" 
+            style="border-radius: 50%;">
+        </div>
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div><br/>
+    <h1 class="greeting" style="text-align: center; font-size: 2vw;">Hello, World <br/>Welcome to my Portfolio</h1>
+    <br/>
+    <div class="container">        
+        <div class="column" id="left-content" style="padding: 0% 2% 0% 2%;"></div>
+
+        <div class="column">
+            <!-- <p style="font-size: 3vw;">Welcome to my Portfolio</p> -->
+            <div class="card">
+                
+                <div class="portrait">
+                    <img class="avatar" 
+                    src="resources/466Luvo Ngodwane lungodw022.jpg" 
+                    alt="Avatar" width="140px">
+                </div>
+                <div class="name-position">
+                    <h4 style="font-size: 1.5vw;"><strong>Luvo Ngodwane</strong></h4>
+                    <p style="font-size: 1.5vw;">Software Engineer</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="column" id="right-content"> -->
+            
+        </div>
+    </div>
+    <script>
+        const contentDiv = document.getElementById("left-content");
+
+        // Function to render content based on the clicked navigation link
+        function renderContent(section) {
+            contentDiv.innerHTML = ""; // Clear previous content
+
+            switch (section) {
+                case "home":
+                    contentDiv.innerHTML = "<h2>Home Content</h2><p>I'm happy you could visit. You can go through my navigation menu to know more about me and what I do.</p>";
+                    break;
+                case "about":
+                    contentDiv.innerHTML = "<h2>About Content</h2><p>I'm motivated Software Developer with a strong foundation in Python and Java. Experienced in both individual and team projects, with strong problem-solving skills and adaptability to new technologies. My background in mechanical engineering provides a unique perspective for comprehensive problem-solving. I'm dedicated to staying up-to-date with industry trends and eager to contribute to impactful projects in a collaborative environment. I tend to prioritize impact over accolades. If you're looking for an enthusiastic and adaptable team member, let's connect to discuss how I can contribute to your organization's goals..</p>";
+                    break;
+                case "experience":
+                    contentDiv.innerHTML = "<h2>Experience Content</h2><p>This is the experience section.</p>";
+                    break;
+                case "projects":
+                    contentDiv.innerHTML = "<h2>Projects Content</h2><p>This is the projects section.</p>";
+                    break;
+                default:
+                    contentDiv.innerHTML = "<h2>Invalid Section</h2><p>Please select a valid section.</p>";
+                    break;
+            }
+        }
+
+        // Add event listeners to navigation links
+        const navLinks = document.querySelectorAll(".navbar a");
+        navLinks.forEach(link => {
+            link.addEventListener("click",   
+ () => {
+                const section = link.getAttribute("href").slice(1); // Remove "#"
+                renderContent(section);
+            });
+        });
+
+        // Render initial content for the "home" section
+        renderContent("home");
+    </script>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "navbar") {
+            x.className += " responsive";
+          } else {
+            x.className = "navbar";
+          }
+        }
+    </script>
+</body>
+</html>
