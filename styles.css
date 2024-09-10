@@ -11,12 +11,17 @@ body {
 }
 
 .navbar {
+    background-color: #ede7da;
+    
+}
+
+.nav-links {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: #ede7da;
+    transition: height 0.3s ease-in-out;
     overflow: hidden;
-    font-size: 1.5vw;
+    /* font-size: 50px; */
 }
 
 .navbar a {
@@ -61,10 +66,14 @@ body {
 
 @media (width < 600px) {
     .navbar.responsive {position: relative;}
+    .navbar .icon {
+        font-size: 20px;
+    }
     .navbar.responsive .icon {
       position: absolute;
       right: 0;
-      top: 0;
+      /* top: 0; */
+      font-size: 20px;
     }
 }
 
@@ -85,3 +94,7 @@ body {
 #left-content {
     padding-left: 10px;
 }
+
+/* #left-content h2 {
+    font-size: 20px;
+} */
